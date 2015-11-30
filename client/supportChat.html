@@ -1,6 +1,9 @@
 <template name="chatClient">
 <div>
-	
+	{{#each messages}}
+		<p>{{message.user}}:</p>
+		<p>{{message.body}}</p>
+	{{/each}}
 </div>
 <div class="input">
 	<textarea placeholder="Type Message | Press enter to send"></textarea>
