@@ -3,12 +3,10 @@ Template.chatClient.events({
       var textarea = $('.input textarea').val();
       if (ev.which === 13 && textarea.trim() !== ''){
         ev.stopPropagation();
-        //Meteor.call('insertMessage', {content: $textarea.val(), channel: Session.get('channel')})
         Messages.insert({
         	body:textarea
         });
-
-        $textarea.val('');
+        $('.input textarea').val('');
       }
     }
 });

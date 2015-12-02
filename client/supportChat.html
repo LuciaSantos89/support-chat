@@ -1,8 +1,7 @@
 <template name="chatClient">
 <div>
 	{{#each messages}}
-		<p>{{message.user}}:</p>
-		<p>{{message.body}}</p>
+		<p>{{user}}: {{body}}</p>
 	{{/each}}
 </div>
 <div class="input">
