@@ -1,4 +1,9 @@
 <template name="chat">
+<aside>
+	{{#each clients}}	
+		<p>{{_id}}</p>
+	{{/each}}
+</aside>
 <div>
 	{{#each chat}}
 		<p>{{user}}: {{message}}</p>
