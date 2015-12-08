@@ -1,9 +1,12 @@
 <template name="chat">
-<aside>
+<div>
+<ul>
 	{{#each clients}}	
-		<p>{{_id}}</p>
+		<li id="{{_id}}" class="client">{{_id}}</li>
 	{{/each}}
-</aside>
+	</ul>
+</div>
+
 <div>
 	{{#each chat}}
 		<p>{{user}}: {{message}}</p>
@@ -12,4 +15,5 @@
 <div class="input">
 	<textarea placeholder="Type Message | Press enter to send"></textarea>
 </div>
+
 </template>
