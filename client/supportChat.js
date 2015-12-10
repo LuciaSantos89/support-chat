@@ -18,7 +18,7 @@ Template.chat.events({
     },
     'click li.client':function(event){
     	var clientId = event.target.id;
-    	var chat = Chat.find({user:clientId}).fetch();
+    	var chat = Chat.find({$or:[{user:clientId}, {to:clientId}]}).fetch();
     	Session.set('clientId',clientId);
     	Session.set('chat',chat);
     }
